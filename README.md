@@ -1,4 +1,5 @@
-# Insider-Threat-DFIR-Autopsy
+# Insider Threat Digital Forensics Investigation (Autopsy)
+
 Digital forensics investigation of an insider threat using Autopsy
 ## Executive Summary
 This project documents a digital forensics investigation into a suspected insider threat involving unauthorized access to proprietary company information. Senior management and legal counsel authorized a forensic analysis of an employee workstation following concerns of policy violations. A disk image of the system was examined using the Autopsy forensic platform to identify deleted files, user activity artifacts, and indicators of intent. The investigation identified deleted confidential documents and correlated them with suspicious user behavior. Findings were documented and reported to leadership for further review and action.
@@ -21,27 +22,39 @@ The investigation followed a standard digital forensics and incident response (D
 ---
 ## Evidence Acquisition & Preservation
 A forensic case was created in Autopsy to analyze a disk image of the suspect workstation. Examiner details, case identifiers, and investigative purpose were documented prior to analysis. The disk image was examined in a read-only state to ensure the integrity of the original evidence was preserved. Autopsy was used to process file systems, unallocated space, and metadata associated with deleted files.
+![Autopsy Case Creation](screenshots/case-creation.png)
+![Disk Image Selection](screenshots/disk-image-selection.png)
+![Configure Log Ingest](screenshots/Configure-ingest.png)
+
+
 
 
 
 ---
 ## Forensic Analysis & Findings
-A forensic case was created in Autopsy to analyze a disk image of the suspect workstation. Examiner details, case identifiers, and investigative purpose were documented prior to analysis. The disk image was examined in a read-only state to ensure the integrity of the original evidence was preserved. Autopsy was used to process file systems, unallocated space, and metadata associated with deleted files.
+The forensic examination focused on identifying unauthorized access to proprietary information through file system analysis and user activity artifacts recovered from the disk image.
 
 
 ---
 
 ### File System & Deleted File Analysis
 Forensic analysis identified multiple files labeled as confidential and restricted that were stored on the suspect’s workstation. Several of these files had been deleted, including documents related to business strategies, drilling methodologies, and oil configurations. The presence of these files suggests unauthorized access to proprietary information outside the employee’s role.
+![Deleted Files View 1](screenshots/deleted-files.png)
 
-User activity artifacts revealed browsing history related to anonymous cryptocurrency transactions, including searches on acquiring Bitcoin anonymously and laundering digital currency. These artifacts were correlated with the presence and deletion of confidential files on the system.
+Confidential Document 1
+![Deleted Files View 2](screenshots/deleted-files2.png)
 
+Confidential Document 2
+![Deleted Files View 3](screenshots/deleted-files3.png)
+
+Confidential Document 3
+![Deleted Files View 4](screenshots/deleted-files4.png)
 
 ---
 ### User Activity Artifacts
-
-
-(Browser history, searches, timelines)
+Analysis of user activity artifacts revealed browser history associated with searches related to anonymous cryptocurrency transactions, including methods to acquire Bitcoin anonymously and avoid detection. These searches were identified during the same timeframe in which proprietary and confidential files were present on the system. This activity was correlated with deleted confidential files and suggests potential intent to conceal or misuse sensitive information.
+![Browser History Evidence 1](screenshots/browser-history1.png)
+![Browser History Evidence 2](screenshots/browser-history2.png)
 
 ---
 
